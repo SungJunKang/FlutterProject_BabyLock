@@ -11,7 +11,6 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: MyHomePage(title: 'BabyLock'),
       routes: route.routes,
     );
   }
@@ -61,11 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             FlatButton(
               child: Image.asset('assets/main/main_screenlock.png'),
-              onPressed: null,
+              onPressed: () {},
             ),
             FlatButton(
               child: Image.asset('assets/main/main_unlockalert.png'),
-              onPressed: null,
+              onPressed: () {},
             ),
             FlatButton(
               child: Image.asset('assets/main/main_playlist.png'),
@@ -75,11 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FlatButton(
               child: Image.asset('assets/main/main_bluelight.png'),
-              onPressed: null,
+              onPressed: () {},
             ),
             FlatButton(
               child: Image.asset('assets/main/main_tutorial.png'),
-              onPressed: null,
+              onPressed: () {},
             )
           ],
           ),
