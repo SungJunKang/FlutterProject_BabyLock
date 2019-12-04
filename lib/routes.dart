@@ -4,7 +4,6 @@ import 'package:babylock/main.dart';
 import 'package:babylock/playlist.dart';
 
 final routes = {
-  '/': (BuildContext context) => Main(),
-  '/main': (BuildContext context) => Main(),
+  '/': (BuildContext context) => MyHomePage(title: 'BabyLock'),
   '/playlist': (BuildContext context) => PlayList(), 
 };

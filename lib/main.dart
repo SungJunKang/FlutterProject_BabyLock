@@ -1,5 +1,5 @@
-import 'package:babylock/playlist.dart';
 import 'package:flutter/material.dart';
+import 'package:babylock/routes.dart' as route;
 
 void main() => runApp(Main());
 
@@ -12,6 +12,7 @@ class Main extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       home: MyHomePage(title: 'BabyLock'),
+      routes: route.routes,
     );
   }
 }
@@ -69,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             FlatButton(
               child: Image.asset('assets/main/main_playlist.png'),
               onPressed: () {
+                Navigator.pushNamed(context, '/playlist');
               },
             ),
             FlatButton(
