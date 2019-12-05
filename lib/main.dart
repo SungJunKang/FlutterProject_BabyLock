@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:babylock/routes.dart' as route;
+import 'package:splashscreen/splashscreen.dart';
 
 void main() => runApp(Main());
 
@@ -26,13 +27,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen(
+      seconds: 2,
+      navigateAfterSeconds: new AfterSplash(),
+      image: Image.asset('assets/main/icon_babylock.png'),
+      photoSize: 100,
+      backgroundColor: Colors.orange,
+    );
   }
+}
+
+class AfterSplash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
         child: Container(
           height: deviceHeight,
+          
           alignment: Alignment.bottomCenter,
           margin: const EdgeInsets.only(left: 30.0, right: 30.0),
           child: GridView.count(
